@@ -1,3 +1,6 @@
+import mysql.connector
+from sqlalchemy import create_engine
+
 def create_primary_tables(cursor):
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Blocks (
@@ -41,8 +44,6 @@ def create_transactions_table(cursor):
         FOREIGN KEY (category_id) REFERENCES TxCategories(category_id)
     )
     """)
-import mysql.connector
-from sqlalchemy import create_engine
 
 config_gsql = {
     'user': 'eth_project',
