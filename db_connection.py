@@ -26,7 +26,7 @@ def create_transactions_table(cursor):
         block_id INT,
         from_id INT,
         to_id INT,
-        asset_value VARCHAR(255) DEFAULT NULL,
+        asset_value FLOAT DEFAULT NULL,
         erc721_token_id VARCHAR(255) DEFAULT NULL,
         erc1155_token_id VARCHAR(255) DEFAULT NULL,
         erc1155_value VARCHAR(255) DEFAULT NULL,
