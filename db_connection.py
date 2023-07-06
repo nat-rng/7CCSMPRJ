@@ -45,12 +45,43 @@ def create_transactions_table(cursor):
     )
     """)
 
-config_gsql = {
+def create_scam_table(cursor):
+    cursor.execute("""
+    CREATE TABLE IF NOT EXISTS ScamAddresses (
+        scam_id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+        address_id INT,
+        address VARCHAR(255),
+        owner_name VARCHAR(255),
+        owner_type VARCHAR(255),
+        owner_sub_type VARCHAR(255),
+        controller_name VARCHAR(255),
+        controller_type VARCHAR(255),
+        FOREIGN KEY (address_id) REFERENCES Addresses(address_id)
+    )
+    """)
+
+config_sql = {
     'user': 'eth_project',
     'password': 'eth_000!',
     'host': 'localhost',
     'port': '3306',
     'database': 'ETHProjectDB'
+}
+
+config_train_sql = {
+    'user': 'eth_project',
+    'password': 'eth_000!',
+    'host': 'localhost',
+    'port': '3306',
+    'database': 'ETHProjectTrainDB'
+}
+
+config_scam_sql = {
+    'user': 'eth_project',
+    'password': 'eth_000!',
+    'host': 'localhost',
+    'port': '3306',
+    'database': 'ETHProjectScamDB'
 }
 
 def create_contracts_table(cursor):
