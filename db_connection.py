@@ -84,6 +84,14 @@ config_scam_sql = {
     'database': 'ETHProjectScamDB'
 }
 
+config_scam_alt_sql = {
+    'user': 'eth_project',
+    'password': 'eth_000!',
+    'host': 'localhost',
+    'port': '3306',
+    'database': 'ETHProjectScamAltDB'
+}
+
 def create_contracts_table(cursor):
     cursor.execute("""
     CREATE TABLE IF NOT EXISTS Contracts (
