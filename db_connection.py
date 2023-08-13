@@ -107,13 +107,11 @@ def connect_db(config):
     return cnx, cursor
 
 def export_df_to_sql(df, table_name, config):
-    # Configure options for the JDBC connection
     properties = {
-        "driver": "org.mariadb.jdbc.Driver",  # MariaDB JDBC driver
+        "driver": "org.mariadb.jdbc.Driver",
         "user": config['user'],
         "password": config['password']
     }
     
     url = f"jdbc:mariadb://{config['host']}:{config['port']}/{config['database']}"
-    # Write the DataFrame to the SQL table
     df.write.format("jdbc").mode("append").option("url", url).option("dbtable", table_name).options(**properties).save()
