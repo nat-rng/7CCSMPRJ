@@ -60,4 +60,10 @@ This repository contains Jupyter notebooks focused on data processing, predictio
 2. Download data files at <https://emckclac-my.sharepoint.com/:f:/g/personal/k2257934_kcl_ac_uk/EvtzfQMAtfdMtc-6AwZGfLIBPYqwBFQiEgxBQ0o_2yAJFw?e=ssmHcu>
 3. Install the required libraries mentioned above and any additional ones if errors are thrown.
     conda instal <library-name>
-4. Execute individual scripts as per requirements.
+4. Execute individual notebook in the following order:
+    - alchemy_data.ipynb
+    - data_processing.ipynb
+    - data_processing_scams.ipynb
+    - scam_data.ipynb
+    - model_selecttion.ipynb
+    - data_predict.ipynb
