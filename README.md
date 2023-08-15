@@ -1,8 +1,5 @@
 # 7CCSMPRJ
 ---
-
-# Project Name
-
 ## Description
 This repository contains Jupyter notebooks focused on data processing, prediction, and analysis. The main components and their purposes are detailed below.
 
