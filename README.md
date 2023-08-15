@@ -15,8 +15,10 @@ This repository contains Jupyter notebooks focused on data processing, predictio
 * sklearn
 * imblearn
 * networkx
+* python-louvain
 * ray-tune
 * hpbandster
+* configspace
 * web3
 * SHAP
 
